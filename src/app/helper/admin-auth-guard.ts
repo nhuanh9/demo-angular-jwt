@@ -41,13 +41,12 @@ export class AdminAuthGuard implements CanActivate, CanActivateChild, CanLoad {
       if (hasRoleAdmin) {
         return true;
       } else {
-        this.authService.logout();
-        this.router.navigate(['/', 'admin', 'dashboard'], {queryParams: {login: true}, queryParamsHandling: 'merge'});
+        this.router.navigate(['/'], {queryParams: {login: true}, queryParamsHandling: 'merge'});
         return false;
       }
     } else {
       // not logged in so redirect to login page with the return url
-      this.router.navigate(['/', 'admin', 'login'], {queryParams: {returnUrl: state.url}});
+      this.router.navigate(['/', 'login'], {queryParams: {returnUrl: state.url}});
       return false;
     }
   }
