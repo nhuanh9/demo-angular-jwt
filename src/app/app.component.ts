@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo-jwt';
+  // @ts-ignore
+  test($event) {
+    console.log($event)
+  }
 }
