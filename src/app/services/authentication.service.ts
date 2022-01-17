@@ -13,7 +13,6 @@ const API_URL = environment.apiUrl;
 export class AuthenticationService {
   private currentUserSubject: BehaviorSubject<UserToken>;
   public currentUser: Observable<UserToken>;
-  update = new EventEmitter<string>();
 
   constructor(private http: HttpClient) {
     // @ts-ignore
