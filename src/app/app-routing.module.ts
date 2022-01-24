@@ -15,10 +15,13 @@ const routes: Routes = [
     component: CreateStudentComponent
   }, {
     path: 'classes',
-    component: ListClasssComponent,
     children: [
       {
-        path: 'create',
+        path:'',
+        component: ListClasssComponent
+      },
+      {
+        path:'create',
         component: CreateClasssComponent
       },
       {
