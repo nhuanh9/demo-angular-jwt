@@ -8,6 +8,9 @@ import { CreateStudentComponent } from './component/student/create-student/creat
 import { ListClasssComponent } from './component/classs/list-classs/list-classs.component';
 import { CreateClasssComponent } from './component/classs/create-classs/create-classs.component';
 import { DetailClasssComponent } from './component/classs/detail-classs/detail-classs.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import { EditStudentComponent } from './component/student/edit-student/edit-student.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { DetailClasssComponent } from './component/classs/detail-classs/detail-c
     CreateStudentComponent,
     ListClasssComponent,
     CreateClasssComponent,
-    DetailClasssComponent
+    DetailClasssComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

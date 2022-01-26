@@ -5,6 +5,7 @@ import {CreateStudentComponent} from "./component/student/create-student/create-
 import {ListClasssComponent} from "./component/classs/list-classs/list-classs.component";
 import {CreateClasssComponent} from "./component/classs/create-classs/create-classs.component";
 import {DetailClasssComponent} from "./component/classs/detail-classs/detail-classs.component";
+import {EditStudentComponent} from "./component/student/edit-student/edit-student.component";
 
 const routes: Routes = [
   {
@@ -13,7 +14,12 @@ const routes: Routes = [
   }, {
     path: 'create-student',
     component: CreateStudentComponent
-  }, {
+  },
+  {
+    path: 'edit-student/:id',
+    component: EditStudentComponent
+  },
+  {
     path: 'classes',
     component: ListClasssComponent,
     children: [

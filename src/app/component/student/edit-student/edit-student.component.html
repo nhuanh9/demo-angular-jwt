@@ -1,15 +1,8 @@
-<h1>List -student</h1>
-<form [formGroup] = "xxx" (submit)="create()">
+<h1>Edit Student Form</h1>
+<form [formGroup] = "xxx" (submit)="save()">
   <input type="text" formControlName = "name">
   <input type="text" formControlName = "score">
   <input type="text" formControlName = "age">
   <input type="text" formControlName = "clazz">
   <button>Ấn tạo đê b ơi</button>
 </form>
-<div *ngFor="let st of listStudent">
-  {{st.name}}
-  {{st.age}}
-  {{st.score}}
-  {{st.clazz.name}}
-</div>
-
