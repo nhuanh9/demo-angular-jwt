@@ -50,4 +50,12 @@ export class ListStudentComponent implements OnInit {
       console.log(error)
     })
   }
+
+  timKiem() {
+    // @ts-ignore
+    let idCanTim = document.getElementById('idCanTim').value;
+    this.studentService.getByClazzId(idCanTim).subscribe(res => {
+      this.listStudent = res;
+    })
+  }
 }

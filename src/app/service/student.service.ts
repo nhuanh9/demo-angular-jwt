@@ -27,4 +27,8 @@ export class StudentService {
   getById(id: string): Observable<Student> {
     return this.httpClient.get<Student>(this.url + `/${id}`)
   }
+
+  getByClazzId(id: string): Observable<Student[]> {
+    return this.httpClient.get<Student[]>(this.url + `/clazz?id=${id}`)
+  }
 }
